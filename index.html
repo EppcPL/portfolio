@@ -308,23 +308,120 @@
         }
 
         /* Kontakt */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-intro h3 {
+            color: var(--neon-cyan);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-intro p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+        }
+
+        .contact-card h4 {
+            color: var(--neon-cyan);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 15px;
             font-size: 1.1rem;
+            margin-bottom: 15px;
         }
 
         .contact-icon {
             width: 30px;
             height: 30px;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .contact-cta {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(144, 0, 255, 0.1));
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--neon-cyan);
+        }
+
+        .contact-cta h4 {
+            color: var(--neon-cyan);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-btn {
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+            border: none;
+            color: var(--dark-bg);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 15px 35px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.5);
         }
 
         /* O mnie Section */
@@ -858,6 +955,32 @@
                 font-size: 0.9rem;
                 padding: 6px 12px;
             }
+
+            /* Contact Responsive */
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-card {
+                padding: 20px;
+            }
+
+            .contact-intro h3 {
+                font-size: 1.6rem;
+            }
+
+            .contact-intro p {
+                font-size: 1.1rem;
+            }
+
+            .contact-cta {
+                padding: 30px 20px;
+            }
+
+            .contact-cta h4 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -1101,20 +1224,49 @@
     <!-- Kontakt -->
     <section id="contact">
         <h2 class="section-title">Kontakt</h2>
-        <div class="contact-info">
-            <div class="contact-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="contact-icon">
-                <span>erykczerech13@gmail.com</span>
+        <div class="contact-content">
+            <div class="contact-intro">
+                <h3>Skontaktuj się ze mną!</h3>
+                <p>Jestem otwarty na nowe możliwości współpracy i projekty. Jeśli masz pytania lub chcesz porozmawiać o potencjalnej współpracy, śmiało napisz!</p>
             </div>
-            <div class="contact-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" alt="Phone" class="contact-icon">
-                <span>510 135 514</span>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>📧 Email</h4>
+                    <div class="contact-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="contact-icon">
+                        <span>erykczerech13@gmail.com</span>
+                    </div>
+                    <p>Najszybszy sposób na kontakt. Odpowiem w ciągu 24h.</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>📱 Telefon</h4>
+                    <div class="contact-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" alt="Phone" class="contact-icon">
+                        <span>510 135 514</span>
+                    </div>
+                    <p>Dostępny od poniedziałku do piątku, 9:00-17:00.</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>💻 GitHub</h4>
+                    <div class="contact-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon">
+                        <a href="https://github.com/eppcpl" target="_blank" rel="noopener" style="color: var(--neon-cyan);">github.com/eppcpl</a>
+                    </div>
+                    <p>Zobacz moje projekty i kod źródłowy.</p>
+                </div>
             </div>
-            <div class="contact-item">
-                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="contact-icon">
-                <a href="https://github.com/eppcpl" target="_blank" rel="noopener" style="color: var(--neon-cyan);">github.com/eppcpl</a>
+            
+            <div class="contact-cta">
+                <h4>Masz projekt do zrealizowania?</h4>
+                <p>Chętnie pomogę w tworzeniu stron internetowych, aplikacji webowych lub innych projektów IT.</p>
+                <a href="mailto:erykczerech13@gmail.com" class="btn contact-btn">
+                    <span class="btn-text">Wyślij wiadomość</span>
+                    <span class="btn-icon">✉️</span>
+                </a>
             </div>
-            <a href="mailto:erykczerech13@gmail.com" class="btn">Wyślij wiadomość</a>
         </div>
     </section>
 
