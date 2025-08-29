@@ -713,6 +713,60 @@
             transition: transform 0.3s ease;
         }
 
+        /* SION Projects */
+        .sion-projects {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .sion-projects h5 {
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .sion-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .sion-project-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .sion-project-item:hover {
+            transform: translateY(-3px);
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+        }
+
+        .sion-project-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sion-project-caption {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
         .detailed-info {
             margin-top: 40px;
             padding: 30px;
@@ -1086,7 +1140,26 @@
                             <span class="btn-icon">👁️</span>
                         </button>
                         <div id="career-details" class="career-details" style="display: none;">
-                            <p>Szczegółowe informacje o mojej pracy w SION zostaną dodane wkrótce...</p>
+                            <h4>Instruktor i Specjalista ds. Informatyki</h4>
+                            <p>W SION zajmowałem się wspieraniem osób niepełnosprawnych w nauce obsługi komputera i urządzeń biurowych, od podstawowych czynności po bardziej zaawansowane zadania informatyczne. Prowadziłem szkolenia dostosowane do indywidualnych potrzeb uczestników, pomagając im pewnie korzystać z technologii.</p>
+                            
+                            <p>Równolegle odpowiadałem za działania informatyczne stowarzyszenia – projektowałem i prowadziłem stronę internetową, formatowałem i drukowałem dokumenty, zarządzałem lokalną siecią komputerową oraz dbałem o sprawne funkcjonowanie sprzętu.</p>
+                            
+                            <p>Dodatkowo projektowałem i wykonywałem nagrody, dyplomy oraz puchary ze sklejki na wydarzenia organizowane przez SION, łącząc kreatywność z praktycznymi umiejętnościami.</p>
+                            
+                            <div class="sion-projects">
+                                <h5>Przykłady wykonanych projektów:</h5>
+                                <div class="sion-projects-grid">
+                                    <div class="sion-project-item">
+                                        <img src="pucharsklejka.jpg" alt="Puchar ze sklejki" class="sion-project-img">
+                                        <p class="sion-project-caption">Puchary na dzień latawca</p>
+                                    </div>
+                                    <div class="sion-project-item">
+                                        <img src="sion.png" alt="Strona internetowa SION" class="sion-project-img">
+                                        <p class="sion-project-caption">Strona internetowa SION</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1216,6 +1289,8 @@
             </div>
         </div>
     </section>
+
+
 
 
 
